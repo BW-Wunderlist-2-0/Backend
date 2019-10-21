@@ -17,6 +17,11 @@ server.use(express.json());
 // Routes
 server.use('/api/auth', authRouter);
 
+// sanity check
+server.get('/', (req, res) => {
+    res.send('hey there')
+})
+
 
 
 module.exports = server;

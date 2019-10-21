@@ -1,6 +1,7 @@
 const express = require('express');
 const cors = require('cors');
-const helmet = require('helmet');
+const helmet = require('helmet'); 
+
 
 const authenticate = require('../auth/authenticate-middleware.js');
 const authRouter = require('../auth/auth-router.js');
@@ -19,8 +20,8 @@ server.use('/api/auth', authRouter);
 
 // sanity check
 server.get('/', (req, res) => {
-    res.send('hey there')
-})
+    res.status(200).json({ api: 'Running' });
+  });
 
 
 

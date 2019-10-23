@@ -19,7 +19,7 @@ server.use(express.json());
 
 
 // Routes
-server.use('/api/auth',authenticate, authRouter);
+server.use('/api/auth', authRouter);
 server.use("/api/users", usersRouter);
 server.use('/api/tasks', tasksRouter);
 server.use('/api/projects', projectsRouter)

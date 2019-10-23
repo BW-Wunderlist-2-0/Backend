@@ -44,6 +44,7 @@ router.get('/:id', (req, res) => {
 
 router.post('/', (req, res) => {
     const newProject = req.body;
+    console.log(newProject)
     Model.addProject(newProject)
         .then(projects => {
             res.status(200).json(projects);
